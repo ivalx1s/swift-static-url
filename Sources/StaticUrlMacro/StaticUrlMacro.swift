@@ -21,7 +21,7 @@ public struct StaticUrlMacro: ExpressionMacro {
         try checkSpaces(segment.content.text)
         try checkCyrillic(segment.content.text)
     
-        return "Foundation.URL(string: \(segment.content.text))!"
+        return "Foundation.URL(string: \(argument))!"
     }
     
     private static func checkURL(_ urlString: String) throws {
